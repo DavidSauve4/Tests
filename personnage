@@ -1,0 +1,77 @@
+class personnage{
+ int fr =120;
+ PImage img; 
+ 
+ float posX;
+ float posY;
+ 
+ float vitesse = 0;
+ float gravity = 0.1;
+ 
+ 
+ void imagePerso() {
+   img = loadImage("pacvert.png");
+   
+   
+   image(img, posX, posY);
+   
+ }
+ 
+ void deplacement(){
+   
+   if(keyPressed){
+     if(keyCode == RIGHT){
+       frameRate(fr);
+       posX = posX+1;
+     }
+     if(keyCode == LEFT){
+       PImage gauche;
+       gauche = loadImage("pacvertgauche.png");
+       image(gauche, posX,posY);
+       frameRate(fr);
+       posX = posX-1;
+     }
+     if(keyCode == UP){
+       PImage haut;
+       haut = loadImage("pacvertUP.png");
+       image(haut, posX,posY);
+       frameRate(fr);
+       posY = posY-1;
+     }
+     if(keyCode == DOWN){
+       PImage bas;
+       bas = loadImage("pacvertDOWN.png");
+       image(bas, posX,posY);
+       frameRate(fr);
+       posY = posY+1;
+     }
+     
+   }
+   
+ }
+  
+  
+  void saut(){
+    
+    
+  }
+  
+  
+  void lancer(){
+    
+    
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+}
